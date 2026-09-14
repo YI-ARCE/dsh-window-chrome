@@ -1,0 +1,14 @@
+# dsh-window-chrome bundle patch
+#
+# Insert one client-plugin row after every shipped layer, so this package's
+# browser half mounts the desktop-shell window chrome: the transparent drag
+# hotzone shown while a session header is swapped, and double-click-to-maximize
+# on any `--wails-draggable: drag` region.
+#
+# These behaviors were previously injected from main.go as raw script strings
+# (dragBarJS / dblClickJS) through ExecJS on every navigation. They are desktop
+# shell concerns, so they live here as a bundle now; main.go keeps only the
+# wails runtime bootstrap and the Go-side `titlebar-dblclick` handler.
+- insert:
+    - id: ui-window-chrome
+      name: 'dsh-window-chrome'

@@ -1,0 +1,46 @@
+{
+  "name": "dsh-window-chrome",
+  "description": "DSH web 插件：Wails 桌面壳窗口交互——无边框拖拽热区、双击最大化、侧栏底部 DevTools 入口（纯浏览器环境自动休眠）",
+  "version": "0.1.1",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "wails",
+    "window",
+    "desktop"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YI-ARCE/dsh-window-chrome.git"
+  }
+}
