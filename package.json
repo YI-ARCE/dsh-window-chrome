@@ -1,7 +1,7 @@
 {
   "name": "dsh-window-chrome",
   "description": "DSH web 插件：Wails 桌面壳窗口交互——无边框拖拽热区、双击最大化、侧栏底部 DevTools 入口（纯浏览器环境自动休眠）",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
